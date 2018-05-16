@@ -1,4 +1,4 @@
-# Report
+# Report {{ data.url }}
 
 {% for cat in data.reportCategories %}
 ## {{ cat.name }}
