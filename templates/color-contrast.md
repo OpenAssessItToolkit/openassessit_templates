@@ -7,12 +7,16 @@ Display value: {{ audit.result.displayValue }}
 
 {% for node in audit.full_audit.extendedInfo.value.nodes %}
 
-Impact: {{ node.impact }}
+HTML:<br>
+`{{ node.html }}`
 
-HTML: `{{ node.html }}`
+Failure Summary:
+{{ node.failureSummary }}
 
-Failure Summary: {{ node.failureSummary }}
+<details><summary>Additional details</summary>
+Selector:  `{{ node.target }}`
 
-<sup>Path: {{ node.path }}</sup>
+Path:  {{ node.path }}
+</details>
 
 {% endfor -%}
