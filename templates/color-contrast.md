@@ -10,13 +10,14 @@ Display value: {{ audit.result.displayValue }}
 HTML:<br>
 `{{ node.html }}`
 
-Failure Summary:
+Summary:<br>
 {{ node.failureSummary }}
 
-<details><summary>Additional details</summary>
-Selector:  `{{ node.target }}`
+<details>
+<summary>Additional debugging details</summary>
+Selector path: `{{ node.target }}`
 
-Path:  {{ node.path }}
+DOM path:  {{ node.path }}
 </details>
-
+<hr>
 {% endfor -%}
