@@ -15,10 +15,13 @@ HTML:<br>
 Summary:<br>
 {{ node.failureSummary }}
 
-<details><summary>Additional debugging details</summary>
-Selector path: `{{ node.target }}`
+<details>
+<summary>__Additional debugging details__</summary>
 
-DOM path:  {{ node.path }}
+_Selector path:_ <br> `{{ node.target }}`
+
+_DOM path:_ <br>
+`{{ node.path }}`
 </details>
 <hr>
 {% endfor -%}

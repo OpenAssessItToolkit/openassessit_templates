@@ -7,19 +7,23 @@ Display value: {{ audit.result.displayValue }}
 
 {% for node in audit.full_audit.extendedInfo.value.nodes %}
 
-Image missing alt tag:
+Image missing alt tag:<br>
 {{ node.html }}
 
-HTML:<br>
+_HTML:_ <br>
 `{{ node.html }}`
 
 <details>
-<summary>Additional debugging details</summary>
-Selector path: `{{ node.target }}`
+<summary>__Additional debugging details__</summary>
 
-DOM path:  {{ node.path }}
+_Selector path:_ <br> `{{ node.target }}`
+`{{ node.target }}`
 
-Summary:  {{ node.failureSummary }}
+_DOM path:_ <br>
+`{{ node.path }}`
+
+_Summary:_ <br>
+{{ node.failureSummary }}
 </details>
 <hr>
 {% endfor -%}
