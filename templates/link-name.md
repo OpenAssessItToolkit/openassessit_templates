@@ -11,10 +11,7 @@ Display value: {{ audit.result.displayValue }}
 
 INSERT IMAGE HERE
 
-{% set badName = node.html %}
-print: {{ badName }}
-
-print stripped: {{ badName|striptags }}
+{# TODO: Insert name of the link and provide advice #}
 
 HTML:<br>
 `{{ node.html }}`
