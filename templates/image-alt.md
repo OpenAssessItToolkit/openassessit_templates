@@ -7,7 +7,7 @@ Display value: {{ audit.result.displayValue }}
 
 {% for node in audit.full_audit.extendedInfo.value.nodes %}
 
-Image missing alt tag:<br>
+###Image missing alt tag:<br>
 {{ node.html }}
 
 _HTML:_ <br>

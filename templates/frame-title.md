@@ -7,7 +7,9 @@ Display value: {{ audit.result.displayValue }}
 
 {% for node in audit.full_audit.extendedInfo.value.nodes %}
 
-INSERT IMAGE HERE:
+###`iframe` missing `<title>` element
+
+{{ node.html }}
 
 HTML:<br>
 `{{ node.html }}`

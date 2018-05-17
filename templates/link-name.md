@@ -7,6 +7,8 @@ Display value: {{ audit.result.displayValue }}
 
 {% for node in audit.full_audit.extendedInfo.value.nodes %}
 
+### INSERT DESCRIPTION OF LINK HERE
+
 INSERT IMAGE HERE
 
 HTML:<br>
@@ -17,9 +19,11 @@ HTML:<br>
 
 _Selector path:_ <br> `{{ node.target }}`
 
-_DOM path:_ <br> `{{ node.path }}`
+_DOM path:_ <br>
+`{{ node.path }}`
 
-_Summary:_ <br> {{ node.failureSummary }}
+_Summary:_ <br>
+{{ node.failureSummary }}
 </details>
 <hr>
 {% endfor -%}

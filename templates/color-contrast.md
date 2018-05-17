@@ -7,6 +7,8 @@ Display value: {{ audit.result.displayValue }}
 
 {% for node in audit.full_audit.extendedInfo.value.nodes %}
 
+### INSERT DESCRIPTION OF IMAGE HERE
+
 INSERT IMAGE HERE:
 
 HTML:<br>
