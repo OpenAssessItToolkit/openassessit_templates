@@ -7,9 +7,14 @@ Display value: {{ audit.result.displayValue }}
 
 {% for node in audit.full_audit.extendedInfo.value.nodes %}
 
-### INSERT DESCRIPTION OF LINK HERE
+#### INSERT DESCRIPTION OF LINK HERE
 
 INSERT IMAGE HERE
+
+{% set badName = node.html %}
+print: {{ badName }}
+
+print stripped: {{ badName|striptags }}
 
 HTML:<br>
 `{{ node.html }}`
