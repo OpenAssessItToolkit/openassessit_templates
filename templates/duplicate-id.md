@@ -7,11 +7,21 @@ Display value: {{ audit.result.displayValue }}
 
 {% for node in audit.full_audit.extendedInfo.value.nodes %}
 
-HTML:<br>
-`{{ node.html }}`
+#####Visual location:
 
-Summary:<br>
-{{ node.failureSummary }}
+|
+
+#####HTML location:
+
+```html
+{{ node.html }}
+```
+
+#####Suggested solution:
+
+1. Check if the page needs that ID for CSS for visual reasons.
+2. Check if the page needs that ID for JS for interactive behaviours.
+3. If it needs the IDs edit the dependent code, then remove duplicate IDs from the HTML.
 
 <details>
 <summary>__Additional debugging details__</summary>

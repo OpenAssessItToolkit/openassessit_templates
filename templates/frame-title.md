@@ -9,12 +9,18 @@ Display value: {{ audit.result.displayValue }}
 
 ####`iframe` missing `<title>` element
 
+#####Visual location:
+
 {{ node.html }}
 
-HTML:<br>
-`{{ node.html }}`
+#####HTML location:
 
-Summary:<br>
+```html
+{{ node.html }}
+```
+
+#####Suggested solution:
+
 {{ node.failureSummary }}
 
 <details>

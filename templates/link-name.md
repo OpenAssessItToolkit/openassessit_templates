@@ -7,14 +7,22 @@ Display value: {{ audit.result.displayValue }}
 
 {% for node in audit.full_audit.extendedInfo.value.nodes %}
 
-#### INSERT DESCRIPTION OF LINK HERE
+{# <h4><em>{{ node.html|striptags }}</em> is not a descriptive name to a screen reader</h4> #}
 
-INSERT IMAGE HERE
+{# A screen reader would just read " {{ node.html|striptags }} ". " {{ node.html|striptags }} " does not indicate its purpose, or where it will take the them. #}
 
-{# TODO: Insert name of the link and provide advice #}
+#####Visual location:
 
-HTML:<br>
-`{{ node.html }}`
+|
+
+#####HTML location:
+
+```html
+{{ node.html }}
+```
+#####Suggested solution:
+
+<br>
 
 <details>
 <summary>__Additional debugging details__</summary>

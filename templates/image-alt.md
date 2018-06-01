@@ -8,10 +8,19 @@ Display value: {{ audit.result.displayValue }}
 {% for node in audit.full_audit.extendedInfo.value.nodes %}
 
 ####Image missing alt tag:<br>
+
+#####Visual location:
+
 {{ node.html }}
 
-_HTML:_ <br>
-`{{ node.html }}`
+#####HTML location:
+
+```html
+{{ node.html }}
+```
+#####Suggested solution:
+
+<br>
 
 <details>
 <summary>__Additional debugging details__</summary>

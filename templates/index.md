@@ -1,4 +1,25 @@
-# Report of {{ data.url }}
+<style>
+img {
+	max-width:99%;
+}
+a {
+  color: blue;
+}
+pre {
+  font: inherit;
+  word-wrap: break-word;
+  background: none;
+  border: none;
+}
+</style>
+
+# {{ data.url|replace('https://', '')}} Assessment
+
+__<{{ data.url }}>__
+
+__Screenshot:__
+
+![Screenshot](http://via.placeholder.com/480x300)
 
 {% for cat in data.reportCategories %}
 ## {{ cat.name }}

@@ -7,18 +7,24 @@ Display value: {{ audit.result.displayValue }}
 
 {% for node in audit.full_audit.extendedInfo.value.nodes %}
 
-#### INSERT DESCRIPTION OF TEXT HERE
+<h4>The "<em>{{ node.html|striptags }}</em>" link has low contrast.</h4>
 
-INSERT IMAGE HERE:
+#####Visual location:
 
-HTML:<br>
-`{{ node.html }}`
+|
 
-Summary:<br>
-{{ node.failureSummary }}
+#####HTML location:
+
+```html
+{{ node.html }}
+```
+
+#####Suggested solution:
+
+{{ node.failureSummary }}`
 
 <details>
-<summary>__Additional debugging details__</summary>
+<summary>_Additional debugging details_</summary>
 
 _Selector path:_ <br>
 `{{ node.target }}`
@@ -26,5 +32,6 @@ _Selector path:_ <br>
 _DOM path:_ <br>
 `{{ node.path }}`
 </details>
+
 <hr>
 {% endfor -%}
