@@ -1,37 +1,39 @@
-{{ audit.result.helpText }}
+{%- if audit.description %}
 
-{# Score: {{ audit.result.score }} #}
-{%- if audit.result.displayValue %}
-Display value: {{ audit.result.displayValue }}
-{% endif %}
+{{ audit.description|trim }}
 
-{% for node in audit.full_audit.extendedInfo.value.nodes %}
+{% endif -%}
 
-####Accesskey found<br>
+{% for item in audit.details['items'] %}
 
-If this is not an application, it probably should not be using Accesskeys.
+### The {{ item.node.snippet|striptags }}element should not have an `accesskey`.
 
-#####Visual location:
+__Visual location:__
+{# TODO: Grabbing screen shots of specific elements can probably be automated #}
+![{{ item.node.snippet|striptags }} element with an access key](https://via.placeholder.com/150x50)
 
-|
-
-#####HTML location:
+__HTML location:__
 
 ```html
-{{ node.html }}
+{{ item.node.snippet }}
 ```
 
-#####Suggested solution:
-
-{{ node.failureSummary }}
+#### Suggested solution:
+Unless this website is an app, remove all `accesskeys` attributes.
 
 <details>
-<summary>__Additional debugging details__</summary>
+<summary>_Additional debugging details_</summary>
+Selector:<br>
+<code>{{ item.node.path }}</code>
 
-_Selector path:_ <br> `{{ node.target }}`
+Path:<br>
+<code>{{ item.node.selector }}</code>
 
-_DOM path:_ <br>
-`{{ node.path }}`
+More detailed explanation:<br>
+{{ item.node.explanation|escape|replace('  ', '<br>') }}
 </details>
+
 <hr>
-{% endfor -%}
+
+<br>
+{% endfor %}

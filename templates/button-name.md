@@ -1,40 +1,44 @@
-{{ audit.result.helpText }}
+{%- if audit.description %}
 
-{# Score: {{ audit.result.score }} #}
-{%- if audit.result.displayValue %}
-Display value: {{ audit.result.displayValue }}
-{% endif %}
+{{ audit.description|trim }}
 
-{% for node in audit.full_audit.extendedInfo.value.nodes %}
+{% endif -%}
 
-#### INSERT DESCRIPTION OF BUTTON HERE
+{% for item in audit.details['items'] %}
 
-{# TODO: Insert name of the button and provide advice #}
+{# TODO: (Priority) Parse the item.node.snippet results to indicate exactly what is wrong, is it the value?, is it missing a value?, is it a missing inner image alt tag?, is it missing inner text to provide specific Suggested solution #}
 
-#####Visual location:
+### This `button` or `input` has no `value` attribute or it contains no inner text to indicate its purpose
 
-|
+__Visual location:__
 
-#####HTML location:
+{# TODO: Grabbing screen shots of specific elements can probably be automated #}
+![button is not discriptive](https://via.placeholder.com/150x50)
+
+#### HTML location:
 
 ```html
-{{ node.html }}
+{{ item.node.snippet }}
 ```
 
-#####Suggested solution:
+#### Suggested solution:
 
-<br>
+There are many ways to fix this issue:
+
+{# TODO: Parse the snippet to detect exactly what is missing. Is is the value? missing text? etc. to provide specific advice on each situation. #}
+{{ item.node.explanation|escape|replace('  ', '<br>') }}
 
 <details>
-<summary>__Additional debugging details__</summary>
+<summary>_Additional debugging details_</summary>
+Selector:<br>
+<code>{{ item.node.path }}</code>
 
-_Selector path:_ <br> `{{ node.target }}`
+Path:<br>
+<code>{{ item.node.selector }}</code>
 
-_DOM path:_ <br>
-`{{ node.path }}`
-
-_Summary:_ <br>
-{{ node.failureSummary }}
 </details>
+
 <hr>
-{% endfor -%}
+
+<br>
+{% endfor %}

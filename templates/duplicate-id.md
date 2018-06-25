@@ -1,35 +1,42 @@
-{{ audit.result.helpText }}
+{%- if audit.description %}
 
-{# Score: {{ audit.result.score }} #}
-{%- if audit.result.displayValue %}
-Display value: {{ audit.result.displayValue }}
-{% endif %}
+{{ audit.description|trim }}
 
-{% for node in audit.full_audit.extendedInfo.value.nodes %}
+{% endif -%}
 
-#####Visual location:
+{% for item in audit.details['items'] %}
 
-|
+### This element has an `id` attribute that is that is duplicated in other locations.
 
-#####HTML location:
+__Visual location:__
+
+![{{ item.node.snippet|striptags }} form element with no label](https://via.placeholder.com/150x50)
+
+__HTML location:__
 
 ```html
-{{ node.html }}
+{{ item.node.snippet }}
 ```
 
-#####Suggested solution:
+####Suggested solution:
 
 1. Check if the page needs that ID for CSS for visual reasons.
-2. Check if the page needs that ID for JS for interactive behaviours.
+2. Check if the page needs that ID for JS for interactive behaviors.
 3. If it needs the IDs edit the dependent code, then remove duplicate IDs from the HTML.
 
 <details>
-<summary>__Additional debugging details__</summary>
+<summary>_Additional debugging details_</summary>
+Selector:<br>
+<code>{{ item.node.path }}</code>
 
-_Selector path:_ <br> `{{ node.target }}`
+Path:<br>
+<code>{{ item.node.selector }}</code>
 
-_DOM path:_ <br>
-`{{ node.path }}`
+More detailed explanation:<br>
+{{ item.node.explanation|escape|replace('  ', '<br>') }}
 </details>
+
 <hr>
-{% endfor -%}
+
+<br>
+{% endfor %}

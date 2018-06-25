@@ -1,38 +1,59 @@
-{{ audit.result.helpText }}
+{%- if audit.description %}
 
-{# Score: {{ audit.result.score }} #}
-{%- if audit.result.displayValue %}
-Display value: {{ audit.result.displayValue }}
-{% endif %}
+{{ audit.description|trim }}
 
-{% for node in audit.full_audit.extendedInfo.value.nodes %}
+{% endif -%}
 
-####Image missing alt tag:<br>
+{% for item in audit.details['items'] %}
 
-#####Visual location:
+__Visual location:__
 
-{{ node.html }}
+Image missing `alt` attribute:
 
-#####HTML location:
+{% if ('onclick' or
+      'onfocus' or
+      'onmousedown' or
+      'onmouseup' or
+      'onmouseover' or
+      'onmouseout') in item.node.snippet  %}
+
+{# If these attributes are on the image it could cause wierd problems. Don't print the image if it has these. #}
+_Auditor - manually add the image_
+
+![Image missing alt tag](https://via.placeholder.com/150x50)
+
+{% else -%}
+
+{# try http://jinja.pocoo.org/docs/2.10/templates/#rejectattr #}
+{# we don't want the images style attribute to start messing with the markdown #}
+
+{{ item.node.snippet|replace('style', 'data-style')}}
+
+{% endif -%}
+
+__HTML location:__
 
 ```html
-{{ node.html }}
+{{ item.node.snippet }}
 ```
-#####Suggested solution:
 
-<br>
+#### Suggested solution:
+
+Add alt text.
 
 <details>
-<summary>__Additional debugging details__</summary>
+<summary>_Additional debugging details_</summary>
+Selector:<br>
+<code>{{ item.node.path }}</code>
 
-_Selector path:_ <br> `{{ node.target }}`
-`{{ node.target }}`
+Path:<br>
+<code>{{ item.node.selector }}</code>
 
-_DOM path:_ <br>
-`{{ node.path }}`
-
-_Summary:_ <br>
-{{ node.failureSummary }}
+Detailed explaination:<br>
+{{ item.node.explanation|escape|replace('  ', '<br>') }}
 </details>
+
 <hr>
-{% endfor -%}
+
+<br>
+{% endfor %}

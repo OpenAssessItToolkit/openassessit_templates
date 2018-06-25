@@ -1,35 +1,50 @@
-{{ audit.result.helpText }}
+{%- if audit.description %}
 
-{# Score: {{ audit.result.score }} #}
-{%- if audit.result.displayValue %}
-Display value: {{ audit.result.displayValue }}
-{% endif %}
+{{ audit.description|trim }}
 
-{% for node in audit.full_audit.extendedInfo.value.nodes %}
+{% endif -%}
 
-####`iframe` missing `<title>` element
+{% for item in audit.details['items'] %}
 
-#####Visual location:
+__Visual location:__
 
-{{ node.html }}
+iframe missing `title`:
 
-#####HTML location:
+{% if 'src' in item.node.snippet  %}
+
+{{ item.node.snippet }}
+
+{% else -%}
+
+_Auditor - manually add image or video_
+
+![iframe missing title](https://via.placeholder.com/50x50)
+
+{% endif -%}
+
+__HTML location:__
 
 ```html
-{{ node.html }}
+{{ item.node.snippet }}
 ```
 
-#####Suggested solution:
+#### Suggested solution:
 
-{{ node.failureSummary }}
+Add a descriptive `title` attribute.
 
 <details>
-<summary>__Additional debugging details__</summary>
+<summary>_Additional debugging details_</summary>
+Selector:<br>
+<code>{{ item.node.path }}</code>
 
-_Selector path:_ <br> `{{ node.target }}`
+Path:<br>
+<code>{{ item.node.selector }}</code>
 
-_DOM path:_ <br>
-`{{ node.path }}`
+Detailed explaination:<br>
+{{ item.node.explanation|escape|replace('  ', '<br>') }}
 </details>
+
 <hr>
-{% endfor -%}
+
+<br>
+{% endfor %}

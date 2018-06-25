@@ -1,42 +1,40 @@
-{{ audit.result.helpText }}
+{%- if audit.description %}
 
-{# Score: {{ audit.result.score }} #}
-{%- if audit.result.displayValue %}
-Display value: {{ audit.result.displayValue }}
-{% endif %}
+{{ audit.description|trim }}
 
-{% for node in audit.full_audit.extendedInfo.value.nodes %}
+{% endif -%}
 
-####Form field missing label:<br>
+{% for item in audit.details['items'] %}
 
-#####Visual location:
+### This element is missing a label
 
--
+__Visual location:__
+{# TODO: Grabbing screen shots of specific elements can probably be automated #}
+![ form element with no label](https://via.placeholder.com/150x50)
 
-#####HTML location:
+__HTML location:__
 
 ```html
-{{ node.html }}
+{{ item.node.snippet }}
 ```
 
-#####Suggested solution:
-
-Add `<label for="something">` to associate the label with that form field. If the element does not have and ID attribute to associate add `id="something"`.<br>
+#### Suggested solution:
+Add `<label for="something">` to associate the label with that form field. If the element does not have and ID attribute to associate add `id="something"`.
 If you wish to visually hide the label add class like `.sr-only` or `.element-invisible` to the `<label>`.
 
-<sub>For more options see 'Additional debugging details' below.</sub>
-
 <details>
-<summary>__Additional debugging details__</summary>
+<summary>_Additional debugging details_</summary>
+Selector:<br>
+<code>{{ item.node.path }}</code>
 
-_Selector path:_ <br> `{{ node.target }}`
-`{{ node.target }}`
+Path:<br>
+<code>{{ item.node.selector }}</code>
 
-_DOM path:_ <br>
-`{{ node.path }}`
-
-_Summary:_ <br>
-{{ node.failureSummary }}
+More detailed explanation:<br>
+{{ item.node.explanation|escape|replace('  ', '<br>') }}
 </details>
+
 <hr>
-{% endfor -%}
+
+<br>
+{% endfor %}
