@@ -6,7 +6,7 @@
 
 {% for item in audit.details['items'] %}
 
-### The link _"{{ item.node.snippet|striptags }}"_ has low contrast.
+### The element _"{{ item.node.snippet|striptags }}"_ has low contrast.
 
 __Visual location:__
 

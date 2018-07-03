@@ -6,11 +6,11 @@
 
 {% for item in audit.details['items'] %}
 
-### This element has an `id` attribute that is that is duplicated in other locations.
+### {{ item.node.explanation|escape|replace('Fix any of the following:', '')|replace('Fix all of the following:', '') }}
 
 __Visual location:__
 
-![{{ item.node.snippet|striptags }} form element with no label](https://via.placeholder.com/150x50)
+![{{ item.node.snippet|striptags }} element with duplicate ID](https://via.placeholder.com/150x50)
 
 __HTML location:__
 
@@ -31,9 +31,6 @@ Selector:<br>
 
 Path:<br>
 <code>{{ item.node.selector }}</code>
-
-More detailed explanation:<br>
-{{ item.node.explanation|escape|replace('  ', '<br>') }}
 </details>
 
 <hr>
