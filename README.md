@@ -1,9 +1,10 @@
 # Lighthouse to Markdown Templates
 
 
-For use with https://github.com/ihadgraft/lighthouse-reporter
+Created for https://github.com/ihadgraft/lighthouse-reporter but that repo has not been updated to Lighthouse 3 yet.  Use my fork until it is updated https://github.com/joelhsmith/lighthouse-reporter
 
-## Warning, the Lighthouse JSON to MarkDown project is in the process of a total rewrite. Which means these templates will be getting a total rewrite. There is too much logic in the templates. We are going to abstract much of that out, as well as, convert some of the advice to includes to make it cleaner and less repetitive.  The output and content will roughly be the same.
+## Warning, the [Lighthouse JSON to MarkDown project](https://github.com/ihadgraft/lighthouse-reporter) is in the process of a total rewrite.
+Which means these templates will be getting a total rewrite. There is too much logic in the templates. We are going to abstract much of that out, as well as, convert some of the advice to includes to make it cleaner and less repetitive.  The output and content will roughly be the same.
 
 
 This script runs [lighthouse](https://developers.google.com/web/tools/lighthouse/) and provides the result to a primitive markdown templating system.
