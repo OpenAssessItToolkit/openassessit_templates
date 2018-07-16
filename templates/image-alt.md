@@ -39,7 +39,7 @@ __HTML location:__
 
 #### Suggested solution:
 
-Add alt text.
+Add an `alt` attribute with an accurate description to the image or add invisible screen reader text.
 
 <details>
 <summary>_Additional debugging details_</summary>
