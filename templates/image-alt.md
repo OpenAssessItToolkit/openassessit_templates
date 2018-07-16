@@ -17,7 +17,7 @@ Image missing `alt` attribute:
       'onmouseover' or
       'onmouseout') in item.node.snippet  %}
 
-{# If these attributes are on the image it could cause wierd problems. Don't print the image if it has these. #}
+{# If these attributes are on the image it could cause wierd problems to the MarkDown and generated html. Don't print the image if it has these. #}
 _Auditor - manually add the image_
 
 ![Image missing alt tag](https://via.placeholder.com/150x50)
