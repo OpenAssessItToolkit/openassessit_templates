@@ -19,8 +19,8 @@ __HTML location:__
 ```
 
 #### Suggested solution:
-Add `<label for="something">` to associate the label with that form field. If the element does not have and ID attribute to associate add `id="something"`.
-If you wish to visually hide the label add class like `.sr-only` or `.element-invisible` to the `<label>`.
+Add `<label for="something">` to associate the label with that form field. If the form element does not have an ID attribute to associate add `id="something"`.
+If you wish to visually hide the label then add a class like `.sr-only` or `.element-invisible` to the `<label>`.
 
 <details>
 <summary>_Additional debugging details_</summary>
