@@ -19,7 +19,7 @@ __HTML location:__
 ```
 
 #### Suggested solution:
-Unless this website is an app, remove all `accesskeys` attributes.
+Unless this website is an app, remove all `accesskeys` attributes. They can interfere with assistive technology.
 
 <details>
 <summary>_Additional debugging details_</summary>
