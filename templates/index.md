@@ -27,11 +27,10 @@ __Screenshot:__
         (audit.scoreDisplayMode == "manual") or
         (audit.scoreDisplayMode == "informative") or
         (audit.scoreDisplayMode == "error")
-%} 
+%}
 
 <br>
 
-[TOC]
 
 ## {{ audit.title }}
 {%- include [audit.audit_template, "audit_result.md"] %}
