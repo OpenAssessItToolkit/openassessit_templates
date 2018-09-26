@@ -9,8 +9,7 @@
 ### This element is missing a label
 
 __Visual location:__
-{# TODO: Grabbing screen shots of specific elements can probably be automated #}
-![ form element with no label](https://via.placeholder.com/150x50)
+![Element missing label]({{ data.requestedUrl|regex_replace('[^0-9a-zA-Z]+', '') }}{{ item.node.selector|regex_replace('[^0-9a-zA-Z]+', '') }}.png)
 
 __HTML location:__
 
@@ -23,15 +22,16 @@ Add `<label for="something">` to associate the label with that form field. If th
 If you wish to visually hide the label then add a class like `.sr-only` or `.element-invisible` to the `<label>`.
 
 <details>
-<summary>_Additional debugging details_</summary>
-Selector:<br>
-<code>{{ item.node.path }}</code>
-
-Path:<br>
-<code>{{ item.node.selector }}</code>
-
-More detailed explanation:<br>
+<summary>_Other options:_</summary>
 {{ item.node.explanation|escape|replace('  ', '<br>') }}
+</details>
+
+<details>
+<summary>_Additional debugging details_</summary>
+Path:<br>
+<code>{{ item.node.path }}</code><br>
+Selector:<br>
+<code>{{ item.node.selector }}</code>
 </details>
 
 <hr>

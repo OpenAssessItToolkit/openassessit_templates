@@ -1,5 +1,5 @@
 <style>
-img { max-width:400px; height: auto;}
+img { max-width:500px; height: auto; max-height: 500px; min-width:10px; min-height:10px; }
 img,iframe {border: 1px solid #ccc;}
 a { color: blue; }
 pre code { font: 9px; }
@@ -20,6 +20,7 @@ __Screenshot:__
 
 {% for cat_id, cat in data.categories.items() -%}
 # {{ cat.title }}
+{{ cat.description }}
 {% for audit_id, audit in cat.audits.items() %}
 
 {%- if ( audit.scoreDisplayMode == "binary" and audit.score == 0) or

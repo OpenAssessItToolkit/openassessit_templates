@@ -10,24 +10,7 @@ __Visual location:__
 
 Image missing `alt` attribute:
 
-{% if ('onclick' or
-      'onfocus' or
-      'onmousedown' or
-      'onmouseup' or
-      'onmouseover' or
-      'onmouseout') in item.node.snippet  %}
-
-{# If these attributes are on the image it could cause wierd problems to the MarkDown and generated html. Don't print the image if it has these. #}
-_Auditor - manually add the image_
-
-![Image missing alt tag](https://via.placeholder.com/150x50)
-
-{% else -%}
-
-{# try http://jinja.pocoo.org/docs/2.10/templates/#rejectattr #}
-{# we don't want the images style attribute to start messing with the markdown #}
-
-{{ item.node.snippet|replace('style', 'data-style')}}
+![Image missing alt tag]({{ data.requestedUrl|regex_replace('[^0-9a-zA-Z]+', '') }}{{ item.node.selector|regex_replace('[^0-9a-zA-Z]+', '') }}.png)
 
 {% endif -%}
 
@@ -42,15 +25,17 @@ __HTML location:__
 Add an `alt` attribute with an accurate description to the image or add invisible screen reader text.
 
 <details>
-<summary>_Additional debugging details_</summary>
-Selector:<br>
-<code>{{ item.node.path }}</code>
-
-Path:<br>
-<code>{{ item.node.selector }}</code>
-
+<summary>_Other options:_</summary>
 Detailed explaination:<br>
 {{ item.node.explanation|escape|replace('  ', '<br>') }}
+</details>
+
+<details>
+<summary>_Additional debugging details_</summary>
+Selector:<br>
+<code>{{ item.node.path }}</code><br>
+Path:<br>
+<code>{{ item.node.selector }}</code>
 </details>
 
 <hr>

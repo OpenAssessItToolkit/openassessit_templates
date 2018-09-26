@@ -14,8 +14,7 @@ Empty links with no text and an image with no alt text will read _"Link Image"_ 
 
 __Visual location:__
 
-{# TODO: Grabbing screen shots of specific elements can probably be automated #}
-![{{ item.node.snippet|striptags }} not discriptive](https://via.placeholder.com/150x50)
+![{{ item.node.snippet|striptags }} not discriptive]({{ data.requestedUrl|regex_replace('[^0-9a-zA-Z]+', '') }}{{ item.node.selector|regex_replace('[^0-9a-zA-Z]+', '') }}.png)
 
 __HTML location:__
 
@@ -32,8 +31,7 @@ Add an `alt` attribute to image or add invisible screen reader text.
 
 __Visual location:__
 
-{# TODO: Grabbing screen shots of specific elements can probably be automated #}
-![{{ item.node.snippet|striptags }} link that is not discriptive](https://via.placeholder.com/150x50)
+![{{ item.node.snippet|striptags }} not discriptive]({{ data.requestedUrl|regex_replace('[^0-9a-zA-Z]+', '') }}{{ item.node.selector|regex_replace('[^0-9a-zA-Z]+', '') }}.png)
 
 __HTML Location__:
 
@@ -44,7 +42,7 @@ Empty links are not read to a screen reader user, as a result, they will have no
 
 #### Suggested solution:
 
-Remove the empty link or add screen reader only text inside link
+Remove the empty link.
 
 {% endif -%}
 
@@ -67,15 +65,16 @@ If the link already exists, delete the _"{{ item.node.snippet|striptags }}"_ Lin
 {% endif -%}
 
 <details>
-<summary>_Additional debugging details_</summary>
-Selector:<br>
-<code>{{ item.node.path }}</code>
-
-Path:<br>
-<code>{{ item.node.selector }}</code>
-
-More detailed explanation:<br>
+<summary>_Other options:_</summary>
 {{ item.node.explanation|escape|replace('  ', '<br>') }}
+</details>
+
+<details>
+<summary>_Additional debugging details_</summary>
+Path:<br>
+<code>{{ item.node.path }}</code><br>
+Selector:<br>
+<code>{{ item.node.selector }}</code>
 </details>
 
 <hr>

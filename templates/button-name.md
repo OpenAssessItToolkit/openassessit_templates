@@ -13,7 +13,7 @@
 __Visual location:__
 
 {# TODO: Grabbing screen shots of specific elements can probably be automated #}
-![button is not discriptive](https://via.placeholder.com/150x50)
+![button is not descriptive](https://via.placeholder.com/150x50)
 
 #### HTML location:
 
@@ -30,12 +30,10 @@ There are many ways to fix this issue:
 
 <details>
 <summary>_Additional debugging details_</summary>
-Selector:<br>
-<code>{{ item.node.path }}</code>
-
 Path:<br>
+<code>{{ item.node.path }}</code><br>
+Selector:<br>
 <code>{{ item.node.selector }}</code>
-
 </details>
 
 <hr>

@@ -19,15 +19,16 @@ __HTML location:__
 Remove the `{{ item.node.snippet }}` tag from the header.
 
 <details>
-<summary>_Additional debugging details_</summary>
-Selector:<br>
-<code>{{ item.node.path }}</code>
-
-Path:<br>
-<code>{{ item.node.selector }}</code>
-
-More detailed explanation:<br>
+<summary>_Other options:_</summary>
 {{ item.node.explanation|escape|replace('  ', '<br>') }}
+</details>
+
+<details>
+<summary>_Additional debugging details_</summary>
+Path:<br>
+<code>{{ item.node.path }}</code><br>
+Selector:<br>
+<code>{{ item.node.selector }}</code>
 </details>
 
 <hr>

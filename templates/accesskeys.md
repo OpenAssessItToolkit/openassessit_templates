@@ -22,15 +22,16 @@ __HTML location:__
 Unless this website is an app, remove all `accesskeys` attributes. They can interfere with assistive technology.
 
 <details>
-<summary>_Additional debugging details_</summary>
-Selector:<br>
-<code>{{ item.node.path }}</code>
-
-Path:<br>
-<code>{{ item.node.selector }}</code>
-
-More detailed explanation:<br>
+<summary>_Other options:_</summary>
 {{ item.node.explanation|escape|replace('  ', '<br>') }}
+</details>
+
+<details>
+<summary>_Additional debugging details_</summary>
+Path:<br>
+<code>{{ item.node.path }}</code><br>
+Selector:<br>
+<code>{{ item.node.selector }}</code>
 </details>
 
 <hr>
