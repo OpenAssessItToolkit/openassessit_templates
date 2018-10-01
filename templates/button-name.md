@@ -24,13 +24,7 @@ There are many ways to fix this issue:
 
 {{ item.node.explanation|escape|replace('  ', '<br>') }}
 
-<details>
-<summary>_Additional debugging details_</summary>
-Path:<br>
-<code>{{ item.node.path }}</code><br>
-Selector:<br>
-<code>{{ item.node.selector }}</code>
-</details>
+{% include 'includes/other-options.md' %}
 
 <hr>
 

@@ -24,19 +24,7 @@ __HTML location:__
 
 Add an `alt` attribute with an accurate description to the image or add invisible screen reader text.
 
-<details>
-<summary>_Other options:_</summary>
-Detailed explaination:<br>
-{{ item.node.explanation|escape|replace('  ', '<br>') }}
-</details>
-
-<details>
-<summary>_Additional debugging details_</summary>
-Selector:<br>
-<code>{{ item.node.path }}</code><br>
-Path:<br>
-<code>{{ item.node.selector }}</code>
-</details>
+{% include 'includes/other-options-w-details.md' %}
 
 <hr>
 

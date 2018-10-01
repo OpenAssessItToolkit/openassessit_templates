@@ -21,18 +21,7 @@ __HTML location:__
 Add `<label for="something">` to associate the label with that form field. If the form element does not have an ID attribute to associate add `id="something"`.
 If you wish to visually hide the label then add a class like `.sr-only` or `.element-invisible` to the `<label>`.
 
-<details>
-<summary>_Other options:_</summary>
-{{ item.node.explanation|escape|replace('  ', '<br>') }}
-</details>
-
-<details>
-<summary>_Additional debugging details_</summary>
-Path:<br>
-<code>{{ item.node.path }}</code><br>
-Selector:<br>
-<code>{{ item.node.selector }}</code>
-</details>
+{% include 'includes/other-options-w-details.md' %}
 
 <hr>
 

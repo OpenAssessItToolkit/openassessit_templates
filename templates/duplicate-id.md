@@ -10,7 +10,7 @@
 
 __Visual location:__
 
-![{{ item.node.snippet|striptags }} element with duplicate ID](assets/{{ generate_img_filename(data.requestedUrl + '/assets', item.node.selector) }})
+![{{ item.node.snippet|striptags }} element with duplicate ID](assets/{{ generate_img_filename(data.requestedUrl, item.node.selector) }})
 
 __HTML location:__
 
@@ -24,18 +24,7 @@ __HTML location:__
 2. Check if the page needs that ID for JS for interactive behaviors.
 3. If it needs the IDs edit the dependent code, then remove duplicate IDs from the HTML.
 
-<details>
-<summary>_Other options:_</summary>
-{{ item.node.explanation|escape|replace('  ', '<br>') }}
-</details>
-
-<details>
-<summary>_Additional debugging details_</summary>
-Path:<br>
-<code>{{ item.node.path }}</code><br>
-Selector:<br>
-<code>{{ item.node.selector }}</code>
-</details>
+{% include 'includes/other-options-w-details.md' %}
 
 <hr>
 

@@ -22,18 +22,9 @@ __HTML location:__
 #### Suggested solution:
 {{ item.node.explanation|escape|replace('Fix any of the following:', '')|replace('Fix all of the following:', '') }}
 
-<details>
-<summary>_Other options:_</summary>
-{{ item.node.explanation|escape|replace('  ', '<br>') }}
-</details>
+Find a color with higher contrast.
 
-<details>
-<summary>_Additional debugging details_</summary>
-Path:<br>
-<code>{{ item.node.path }}</code><br>
-Selector:<br>
-<code>{{ item.node.selector }}</code>
-</details>
+{% include 'includes/other-options.md' %}
 
 <hr>
 
