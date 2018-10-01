@@ -10,6 +10,6 @@ Description:<br>
 
 {% endif -%}
 
-<br>
-
 <hr>
+
+<br>

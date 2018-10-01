@@ -23,9 +23,11 @@ _Summary:_
 ```
 #####Suggested solution:
 
-<br>
+
 
 {% include 'includes/other-options-w-details.md' %}
 
 <hr>
+
+<br>
 {% endfor -%}
