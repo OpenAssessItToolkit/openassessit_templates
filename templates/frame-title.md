@@ -16,7 +16,7 @@ iframe missing `title`:
 
 {% else -%}
 
-![iframe missing title](assets/{{ generate_img_filename(data.requestedUrl, item.node.selector) }})
+![iframe missing title](assets/{{ generate_img_filename(data.finalUrl, item.node.selector) }})
 
 {% endif -%}
 

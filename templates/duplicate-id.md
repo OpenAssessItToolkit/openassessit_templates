@@ -10,7 +10,7 @@
 
 __Visual location:__
 
-![{{ item.node.snippet|striptags }} element with duplicate ID](assets/{{ generate_img_filename(data.requestedUrl, item.node.selector) }})
+![{{ item.node.snippet|striptags }} element with duplicate ID](assets/{{ generate_img_filename(data.finalUrl, item.node.selector) }})
 
 __HTML location:__
 

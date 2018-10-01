@@ -9,7 +9,7 @@
 ### This element is missing a label
 
 __Visual location:__
-![Element missing label](assets/{{ generate_img_filename(data.requestedUrl, item.node.selector) }})
+![Element missing label](assets/{{ generate_img_filename(data.finalUrl, item.node.selector) }})
 
 __HTML location:__
 

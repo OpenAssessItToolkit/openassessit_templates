@@ -10,7 +10,7 @@
 
 __Visual location:__
 
-![Text with low contrast](assets/{{ generate_img_filename(data.requestedUrl, item.node.selector) }})
+![Text with low contrast](assets/{{ generate_img_filename(data.finalUrl, item.node.selector) }})
 
 
 __HTML location:__

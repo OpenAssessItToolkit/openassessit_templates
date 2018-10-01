@@ -14,7 +14,7 @@ Empty links with no text and an image with no alt text will read _"Link Image"_ 
 
 __Visual location:__
 
-![{{ item.node.snippet|striptags }} not descriptive](assets/{{ generate_img_filename(data.requestedUrl, item.node.selector) }})
+![{{ item.node.snippet|striptags }} not descriptive](assets/{{ generate_img_filename(data.finalUrl, item.node.selector) }})
 
 __HTML location:__
 
@@ -31,7 +31,7 @@ Add an `alt` attribute to image or add invisible screen reader text.
 
 __Visual location:__
 
-![{{ item.node.snippet|striptags }} not descriptive](assets/{{ generate_img_filename(data.requestedUrl, item.node.selector) }})
+![{{ item.node.snippet|striptags }} not descriptive](assets/{{ generate_img_filename(data.finalUrl, item.node.selector) }})
 
 __HTML Location__:
 
