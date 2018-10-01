@@ -10,7 +10,7 @@
 
 __Visual location:__
 
-![{{ item.node.snippet|striptags }} element with duplicate ID](https://via.placeholder.com/150x50)
+![{{ item.node.snippet|striptags }} element with duplicate ID](assets/{{ generate_img_filename(data.requestedUrl + '/assets', item.node.selector) }})
 
 __HTML location:__
 

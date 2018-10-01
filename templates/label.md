@@ -9,7 +9,7 @@
 ### This element is missing a label
 
 __Visual location:__
-![Element missing label]({{ data.requestedUrl|regex_replace('[^0-9a-zA-Z]+', '') }}{{ item.node.selector|regex_replace('[^0-9a-zA-Z]+', '') }}.png)
+![Element missing label](assets/{{ generate_img_filename(data.requestedUrl, item.node.selector) }})
 
 __HTML location:__
 

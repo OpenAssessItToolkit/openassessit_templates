@@ -16,9 +16,7 @@ iframe missing `title`:
 
 {% else -%}
 
-_Auditor - manually add image or video_
-
-![iframe missing title](https://via.placeholder.com/50x50)
+![iframe missing title]({{ generate_img_filename(data.requestedUrl, item.node.selector) }})
 
 {% endif -%}
 

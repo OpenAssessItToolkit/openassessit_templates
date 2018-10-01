@@ -10,7 +10,7 @@
 
 __Visual location:__
 
-![Text with low contrast]({{ data.requestedUrl|regex_replace('[^0-9a-zA-Z]+', '') }}{{ item.node.selector|regex_replace('[^0-9a-zA-Z]+', '') }}.png)
+![Text with low contrast](assets/{{ generate_img_filename(data.requestedUrl, item.node.selector) }})
 
 
 __HTML location:__

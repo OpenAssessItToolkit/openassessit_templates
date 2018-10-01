@@ -14,9 +14,7 @@ __{{ data.requestedUrl }}__
 
 __Screenshot:__
 
-{# TODO: automate creating a single screenshot by writing custom audit based off of Performance audit lighthouse-core/audits/metrics.js using emulation: desktop #}
-
-![Screenshot of this website](http://via.placeholder.com/480x300)
+![Screenshot of this website](assets/screenshot.png)
 
 {% for cat_id, cat in data.categories.items() -%}
 # {{ cat.title }}

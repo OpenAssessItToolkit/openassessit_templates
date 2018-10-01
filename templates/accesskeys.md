@@ -9,8 +9,7 @@
 ### The {{ item.node.snippet|striptags }}element should not have an `accesskey`.
 
 __Visual location:__
-{# TODO: Grabbing screen shots of specific elements can probably be automated #}
-![{{ item.node.snippet|striptags }} element with an access key](https://via.placeholder.com/150x50)
+![{{ item.node.snippet|striptags }} element with an access key](assets/{{ generate_img_filename(data.requestedUrl + '/assets', item.node.selector) }})
 
 __HTML location:__
 

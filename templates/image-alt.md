@@ -10,7 +10,7 @@ __Visual location:__
 
 Image missing `alt` attribute:
 
-![Image missing alt tag]({{ data.requestedUrl|regex_replace('[^0-9a-zA-Z]+', '') }}{{ item.node.selector|regex_replace('[^0-9a-zA-Z]+', '') }}.png)
+![Image missing alt tag]({{ generate_img_filename(data.requestedUrl, item.node.selector) }})
 
 {% endif -%}
 
