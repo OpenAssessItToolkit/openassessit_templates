@@ -6,7 +6,7 @@
 <details>
 <summary>_Additional debugging details_</summary>
 Path:<br>
-<code>{{ item.node.path }}</code><br>
+`{{ item.node.path }}`<br>
 Selector:<br>
-<code>{{ item.node.selector }}</code>
+`{{ item.node.selector|replace('$', 'S') }}`
 </details>

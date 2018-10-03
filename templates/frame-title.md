@@ -10,15 +10,7 @@ __Visual location:__
 
 iframe missing `title`:
 
-{% if 'src' in item.node.snippet  %}
-
-{{ item.node.snippet }}
-
-{% else -%}
-
-![iframe missing title](assets/{{ generate_img_filename(data.finalUrl, item.node.selector) }})
-
-{% endif -%}
+![{{ item.node.snippet|striptags }} missing title](assets/{{ generate_img_filename(data.finalUrl, item.node.selector) }})
 
 __HTML location:__
 

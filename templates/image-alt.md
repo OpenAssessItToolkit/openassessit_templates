@@ -12,7 +12,6 @@ Image missing `alt` attribute:
 
 ![Image missing alt tag](assets/{{ generate_img_filename(data.finalUrl, item.node.selector) }})
 
-{% endif -%}
 
 __HTML location:__
 
