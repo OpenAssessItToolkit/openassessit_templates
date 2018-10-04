@@ -19,7 +19,7 @@ __Screenshot:__
 {% for cat_id, cat in data.categories.items() -%}
 # {{ cat.title }}
 {{ cat.description }}
-{% for audit_id, audit in cat.audits.items() %}
+{% for audit in cat.sorted_audits %}
 
 {%- if ( audit.scoreDisplayMode == "binary" and audit.score == 0) or
         (audit.scoreDisplayMode == "numeric" and audit.score != 100 ) or
