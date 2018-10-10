@@ -6,7 +6,7 @@
 
 {% for item in audit.details['items'] %}
 
-### {{ item.node.explanation|escape|replace('Fix any of the following:', '')|replace('Fix all of the following:', '') }}
+<h3> {{ item.node.explanation|escape|replace('Fix any of the following:', '')|replace('Fix all of the following:', '') }} </h3>
 
 __Visual location:__
 

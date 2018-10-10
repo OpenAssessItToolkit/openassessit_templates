@@ -9,7 +9,7 @@
 ### The {{ item.node.snippet|striptags }}element should not have an `accesskey`.
 
 __Visual location:__
-![{{ item.node.snippet|striptags }} element with an access key](assets/{{ generate_img_filename(data.finalUrl + '/assets', item.node.selector) }})
+![{{ item.node.snippet|striptags }} element with an access key](assets/{{ generate_img_filename(data.finalUrl + item.node.selector) }})
 
 __HTML location:__
 
