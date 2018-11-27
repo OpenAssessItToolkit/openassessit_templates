@@ -6,11 +6,11 @@
 
 {% for item in audit.details['items'] %}
 
-{% if 'img' in item.node.snippet  %}
+{% if (item.node.snippet|striptags == '') and ('img ' in item.node.snippet) and ('alt=' not in item.node.snippet)  %}
 
 ### This `<a>` link has no text and its image has no `alt` attribute.
 
-Empty links with no text and an image with no alt text will read _"Link Image"_ to screen reader users. As a result, they will not know what the link does or what is in the image.
+Empty links with no text and an image with no alt text may read _"Link Image"_ to screen reader users. As a result, they will not know what the link does or what is in the image.
 
 __Visual location:__
 
@@ -25,7 +25,7 @@ __HTML location:__
 #### Suggested solution:
 Add an `alt` attribute to image or add invisible screen reader text.
 
-{% else -%}
+{% elif (item.node.snippet|striptags == '') and ('img ' not in item.node.snippet)  %}
 
 ### This `<a>` link has no text inside.
 
@@ -44,13 +44,17 @@ Empty links are not read to a screen reader user, as a result, they will have no
 
 Remove the empty link.
 
-{% endif -%}
 
-{% if item.node.snippet|striptags|trim != '' %}
 
-### A link name of _"{{ item.node.snippet|striptags }}"_ is not a descriptive name to a screen reader.
+{% elif (item.node.snippet|striptags|trim != '') and ('img ' not in item.node.snippet) and ('alt=' not in item.node.snippet) %}
 
-A screen reader user would just hear _"Link {{ item.node.snippet|striptags }} "_. That does not indicate its purpose, or where it will take the them.
+### A link name of _"{{ item.node.snippet|striptags }}"_ might not a descriptive name to a screen reader.
+
+A screen reader user might just hear _"Link {{ item.node.snippet|striptags }} "_. If that clearly indicates its purpose and where it will take the them, it is ok.  If it is vauge like, "Read more" or "Learn more", it won't make sense out of context and it must be changed.
+
+__Visual location:__
+
+![{{ item.node.snippet|striptags }} not descriptive](assets/{{ generate_img_filename(data.finalUrl, item.node.selector) }})
 
 #### HTML location:
 
@@ -60,7 +64,51 @@ A screen reader user would just hear _"Link {{ item.node.snippet|striptags }} "_
 
 #### Suggested solution:
 
-If the link already exists, delete the _"{{ item.node.snippet|striptags }}"_ Link. Or add screen reader only text inside the link.
+Ask does this link name make sense if no context is provided? If yes, this can be ignored.  If no, check if the link already exists in another context, delete the _"{{ item.node.snippet|striptags }}"_ Link. Or add screen reader only text inside the link.
+
+
+
+{% elif ('learn more' in item.node.snippet|striptags|trim ) or ('read more' in item.node.snippet|striptags|trim ) %}
+
+### For a screen reader user, 'Learn more' or 'Read more' does not describe what the link does or where it will take them.
+
+A screen reader user might just hear _"Link {{ item.node.snippet|striptags }} "_. If that clearly indicates its purpose and where it will take the them, it is ok.  If it is vauge like, "Read more" or "Learn more", it won't make sense out of context and it must be changed.
+
+__Visual location:__
+
+![{{ item.node.snippet|striptags }} not descriptive](assets/{{ generate_img_filename(data.finalUrl, item.node.selector) }})
+
+#### HTML location:
+
+```html
+{{ item.node.snippet }}
+```
+
+#### Suggested solution:
+
+If it is vauge like, "Read more" or "Learn more", it won't make sense out of context and it must be changed.
+
+
+
+{% else -%}
+
+### I need a human! I'm not sure, but this link might not have a descriptive name to a screen reader.
+
+If the link text and/or the image's alt text clearly indicate the links purpose and where it will take the them, the link is fine.
+
+__Visual location:__
+
+![{{ item.node.snippet|striptags }} not descriptive](assets/{{ generate_img_filename(data.finalUrl, item.node.selector) }})
+
+#### HTML location:
+
+```html
+{{ item.node.snippet }}
+```
+
+#### Suggested solution:
+
+Ask does this link name make sense if no context is provided? If yes, this can be ignored.  If no, maybe the link is not necessary.  Check if the link already exists in another context. Or add screen reader only text inside the link.
 
 {% endif -%}
 
@@ -70,3 +118,7 @@ If the link already exists, delete the _"{{ item.node.snippet|striptags }}"_ Lin
 
 <br>
 {% endfor %}
+
+### FYI: What is 'screen reader only' text? 
+
+{% include 'includes/link-name--sr-only--solution.md' %}
