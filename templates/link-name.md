@@ -42,13 +42,13 @@ Empty links are not read to a screen reader user, as a result, they will have no
 
 #### Suggested solution:
 
-Remove the empty link.
+Remove the empty link. Or add invisible screen reader text.
 
 
 
 {% elif (item.node.snippet|striptags|trim != '') and ('img ' not in item.node.snippet) and ('alt=' not in item.node.snippet) %}
 
-### A link name of _"{{ item.node.snippet|striptags }}"_ might not a descriptive name to a screen reader.
+### A link name of _"{%raw%}{{ item.node.snippet|striptags }}{%endraw%}"_ might not a descriptive name to a screen reader.
 
 A screen reader user might just hear _"Link {{ item.node.snippet|striptags }} "_. If that clearly indicates its purpose and where it will take the them, it is ok.  If it is vauge like, "Read more" or "Learn more", it won't make sense out of context and it must be changed.
 
@@ -86,7 +86,7 @@ __Visual location:__
 
 #### Suggested solution:
 
-If it is vauge like, "Read more" or "Learn more", it won't make sense out of context and it must be changed.
+If it is vauge like, "Read more" or "Learn more", it won't make sense out of context and it must be changed. Or add invisible screen reader text.
 
 
 
@@ -119,6 +119,6 @@ Ask does this link name make sense if no context is provided? If yes, this can b
 <br>
 {% endfor %}
 
-### FYI: What is 'screen reader only' text? 
+### FYI: What is 'invisible screen reader only' text?
 
 {% include 'includes/link-name--sr-only--solution.md' %}
