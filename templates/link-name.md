@@ -6,7 +6,7 @@
 
 {% for item in audit.details['items'] %}
 
-{% if (item.node.snippet|striptags == '') and ('img ' in item.node.snippet) and ('alt=' not in item.node.snippet)  %}
+{% if (item.node.snippet|striptags == '') and ('img ' in item.node.snippet) and ('alt' not in item.node.snippet)  %}
 
 ### This `<a>` link has no text and its image has no `alt` attribute.
 
@@ -23,7 +23,7 @@ __HTML location:__
 ```
 
 #### Suggested solution:
-Add an `alt` attribute to image or add invisible screen reader text.
+Add an `alt` attribute to image.
 
 {% elif (item.node.snippet|striptags == '') and ('img ' not in item.node.snippet)  %}
 
@@ -42,7 +42,7 @@ Empty links are not read to a screen reader user, as a result, they will have no
 
 #### Suggested solution:
 
-Remove the empty link. Or add invisible screen reader text.
+Remove the empty link.
 
 
 
