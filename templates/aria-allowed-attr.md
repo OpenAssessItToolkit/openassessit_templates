@@ -1,33 +1,31 @@
-{{ audit.result.helpText }}
+{%- if audit.description %}
 
-{# Score: {{ audit.result.score }} #}
-{%- if audit.result.displayValue %}
-Display value: {{ audit.result.displayValue }}
-{% endif %}
+{{ audit.description|trim }}
 
-{% for node in audit.full_audit.extendedInfo.value.nodes %}
+{% endif -%}
 
-<h4>This {{ node.failureSummary|replace('Fix any of the following:', '')}} here</h4>
+{% for item in audit.details['items'] %}
 
-_Summary:_
-{{ node.failureSummary }}
+### This element's role is not valid.
 
-#####Visual location:
+__Visual location:__
 
-|
+![aria attribute not allowed here](assets/{{ generate_img_filename(data.finalUrl, item.node.selector) }})
 
-#####HTML location:
+
+__HTML location:__
 
 ```html
-{{ node.html }}
+{{ item.node.snippet }}
 ```
-#####Suggested solution:
 
+#### Suggested solution:
 
+TODO.
 
 {% include 'includes/other-options-w-details.md' %}
 
 <hr>
 
 <br>
-{% endfor -%}
+{% endfor %}
