@@ -22,6 +22,8 @@ __HTML location:__
 Add `<label for="something">` to associate the label with that form field. If the form element does not have an ID attribute to associate add `id="something"`.
 If you wish to visually hide the label then add a class like `.sr-only` or `.element-invisible` to the `<label>`.
 
+If that already exists, add a `placeholder` attribute. Hidden labels require a `placeholder` attribute so people know what the field is for.
+
 {% include 'includes/other-options-w-details.md' %}
 
 <hr>
