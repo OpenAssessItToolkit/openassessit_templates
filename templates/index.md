@@ -10,7 +10,7 @@ pre { font: inherit; word-wrap: break-word; background: none; border: none; }
 
 # {{ data.requestedUrl|replace('https://', '')|capitalize }} Assessment
 
-__{{ data.requestedUrl }}__
+__<{{ data.requestedUrl }}>__
 
 __Screenshot:__
 
