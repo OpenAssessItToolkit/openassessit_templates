@@ -17,7 +17,9 @@ __HTML location:__
 #### Suggested solution:
 
 If applicable:
+
 1. Change `maximum-scale=1.0` to at least `maximum-scale=5`.
+
 2. Remove the `user-scaleable=no` attribute from the meta tag.
 
 {% include 'includes/other-options-w-details.md' %}
