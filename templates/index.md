@@ -28,11 +28,9 @@ __Screenshot:__
         (audit.scoreDisplayMode == "error")
 %}
 
-<br>
-
-
-## {{ audit.title }}
 {%- include [audit.audit_template, "audit_result.md"] %}
+<hr>
+<br>
 {%- endif %}
 
 {% endfor %}
