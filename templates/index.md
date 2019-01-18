@@ -35,3 +35,5 @@ __Screenshot:__
 
 {% endfor %}
 {%- endfor -%}
+
+{% include 'includes/footer.md' %}
