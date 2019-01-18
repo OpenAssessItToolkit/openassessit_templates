@@ -24,7 +24,9 @@ If applicable:
 
 {% include 'includes/other-options-w-details.md' %}
 
-<hr>
+-
+<br>
+
+{% endfor %}
 
 <br>
-{% endfor %}

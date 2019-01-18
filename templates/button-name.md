@@ -26,7 +26,9 @@ There are many ways to fix this issue:
 
 {% include 'includes/other-options.md' %}
 
-<hr>
+-
+<br>
+
+{% endfor %}
 
 <br>
-{% endfor %}

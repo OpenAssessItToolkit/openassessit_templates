@@ -25,12 +25,14 @@ Using this `role` on this parent element is harmful because it does not do anyth
 
 If this element's `role` is meant to be helpful, add the required `role` indicated above to its children.
 
-If this element's `role` is unnecessary, remove it. 
+If this element's `role` is unnecessary, remove it.
 
 
 {% include 'includes/other-options.md' %}
 
-<hr>
+-
+<br>
+
+{% endfor %}
 
 <br>
-{% endfor %}

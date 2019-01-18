@@ -23,7 +23,9 @@ Move the offending child elements inside list item `<li>` elements.
 
 {% include 'includes/other-options.md' %}
 
-<hr>
+-
+<br>
+
+{% endfor %}
 
 <br>
-{% endfor %}

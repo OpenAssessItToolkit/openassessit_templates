@@ -26,7 +26,9 @@ __HTML location:__
 
 {% include 'includes/other-options-w-details.md' %}
 
-<hr>
+-
+<br>
+
+{% endfor %}
 
 <br>
-{% endfor %}

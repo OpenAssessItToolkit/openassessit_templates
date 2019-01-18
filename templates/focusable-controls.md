@@ -6,8 +6,10 @@ __I need a human!__ Manual Test: {{ audit.title|escape }}
 Description:<br>
 {{ audit.description|trim|escape }}
 
-{% endif -%}
+Pay special attention to menus. The user should be able access the entire menu with they keyboard alone.
 
 <br>
 
-<hr>
+{% endif -%}
+
+<br>

@@ -30,7 +30,9 @@ Selector:<br>
 <code>{{ item.node.selector }}</code>
 </details>
 
-<hr>
+-
+<br>
+
+{% endfor %}
 
 <br>
-{% endfor %}

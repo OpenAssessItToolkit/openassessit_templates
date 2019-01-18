@@ -6,8 +6,10 @@ __I need a human!__ Manual Test: {{ audit.title|escape }}
 Description:<br>
 {{ audit.description|trim|escape }}
 
-{% endif -%}
+Pay special attention to menus. For example, the focus indicator should not be lost while tabbing through a menu.
 
-<hr>
+<br>
+
+{% endif -%}
 
 <br>

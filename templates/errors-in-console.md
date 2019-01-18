@@ -15,7 +15,9 @@ __Error:__
 #### Suggested solution:
 Auditor TODO: If possible, add solution based on error.
 
-<hr>
+-
+<br>
+
+{% endfor %}
 
 <br>
-{% endfor %}
