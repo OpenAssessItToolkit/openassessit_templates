@@ -27,7 +27,7 @@ __Screenshot:__
         (audit.scoreDisplayMode == "informative") or
         (audit.scoreDisplayMode == "error")
 %}
-##{{ audit.title }}
+## {{ audit.title }}
 {%- include [audit.audit_template, "audit_result.md"] %}
 <hr>
 <br>
