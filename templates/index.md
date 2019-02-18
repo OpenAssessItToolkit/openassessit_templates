@@ -1,13 +1,3 @@
-<style>
-img { max-width:500px; height: auto; max-height: 500px; min-width:10px; min-height:10px; }
-img,iframe {border: 1px solid #ccc;}
-a { color: blue; }
-pre code { font: 9px; }
-pre { font: inherit; word-wrap: break-word; background: none; border: none; }
-.force-thumbnail { width: 150px; }
-.force-thumbnail img { height: auto; }
-</style>
-
 # {{ data.requestedUrl|replace('https://', '')|capitalize }} Assessment
 
 __<{{ data.requestedUrl }}>__
