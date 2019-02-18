@@ -20,7 +20,7 @@ Remove the `{{ item.node.snippet }}` tag from the header.
 
 {% include 'includes/other-options-w-details.md' %}
 
--
+---
 <br>
 
 {% endfor %}

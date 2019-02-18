@@ -16,5 +16,5 @@ An invalid or missing `doctype` also makes it difficult or impossible to verify 
 
 Use a valid 'doctype' as the first line of the HTML. [List of valid doctypes](https://www.w3.org/QA/2002/04/valid-dtd-list.html).
 
--
+---
 <br>
