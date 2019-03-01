@@ -25,8 +25,5 @@ If applicable:
 {% include 'includes/other-options-w-details.md' %}
 
 ---
-<br>
 
 {% endfor %}
-
-<br>

@@ -10,4 +10,5 @@ Pay special attention to buttons and links.  For example, links and buttons shou
 
 {% endif -%}
 
-<br>
+---
+

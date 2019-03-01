@@ -27,8 +27,5 @@ There are many ways to fix this issue:
 {% include 'includes/other-options.md' %}
 
 ---
-<br>
 
 {% endfor %}
-
-<br>

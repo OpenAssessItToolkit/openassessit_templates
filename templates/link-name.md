@@ -114,8 +114,9 @@ Ask does this link name make sense if no context is provided? If yes, this can b
 
 {% include 'includes/other-options-w-details.md' %}
 
----
 <br>
+
+---
 
 {% endfor %}
 
@@ -123,5 +124,4 @@ Ask does this link name make sense if no context is provided? If yes, this can b
 
 {% include 'includes/link-name--sr-only--solution.md' %}
 
--
-<br>
+---

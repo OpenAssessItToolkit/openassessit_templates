@@ -16,8 +16,5 @@ __Error:__
 Auditor TODO: If possible, add solution based on error.
 
 ---
-<br>
 
 {% endfor %}
-
-<br>

@@ -8,8 +8,6 @@ Description:<br>
 
 Pay special attention to menus. For example, the focus indicator should not be lost while tabbing through a menu.
 
-<br>
-
 {% endif -%}
 
-<br>
+---

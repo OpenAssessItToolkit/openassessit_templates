@@ -11,5 +11,6 @@ Note: This is the default `audit_result.md` template. Creating a [custom templat
 ```json
 {{ audit }}
 ```
+
 ---
-<br>
+

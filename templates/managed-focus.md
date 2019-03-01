@@ -8,8 +8,6 @@ Description:<br>
 
 Pay special attention to popup windows like ads or email signup solicitations. 
 
-<br>
-
 {% endif -%}
 
-<br>
+---

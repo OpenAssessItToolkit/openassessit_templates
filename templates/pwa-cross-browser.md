@@ -14,4 +14,4 @@ __[Current browser market shares](https://www.w3counter.com/globalstats.php)__
 
 Please test in real browsers to ensure the website works on commonly used browsers.  We do not require compatibility with Internet Explorer as it is discontinued. It is up to {{ data.finalUrl|replace('https://', '')|capitalize }} if they wish to spend resources accommodating the obsolete browser.
 
-<br>
+---

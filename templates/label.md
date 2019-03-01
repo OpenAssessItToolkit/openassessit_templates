@@ -27,8 +27,5 @@ If that already exists, add a `placeholder` attribute. Hidden labels require a `
 {% include 'includes/other-options-w-details.md' %}
 
 ---
-<br>
 
 {% endfor %}
-
-<br>
