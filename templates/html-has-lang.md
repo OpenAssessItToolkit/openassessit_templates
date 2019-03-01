@@ -1,3 +1,5 @@
+## {{ audit.title }} [WCAG 3.1.1](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#language-of-page)
+
 {%- if audit.description %}
 
 {{ audit.description|trim|escape }}

@@ -1,7 +1,9 @@
-##{{ audit.title }}
+## {{ audit.title }}
 
 {% if audit.description %}
+
 {{ audit.description|escape }}
+
 {% endif %}
 
 {{ audit.scoreDisplayMode|capitalize }} score = {{ audit.score }}

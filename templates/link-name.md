@@ -1,3 +1,5 @@
+## {{ audit.title }} [WCAG 4.1.2](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#name-role-value)
+
 {%- if audit.description %}
 
 {{ audit.description|trim }}
@@ -42,7 +44,7 @@ Empty links are not read to a screen reader user, as a result, they will have no
 
 #### Suggested solution:
 
-Remove the empty link.
+Consider adding invisible screen reader only text to describe its purpose. If the empty link is extraneous consider removing it.
 
 
 
@@ -86,7 +88,7 @@ __Visual location:__
 
 #### Suggested solution:
 
-If it is vauge like, "Read more" or "Learn more", it won't make sense out of context and it must be changed. Or add invisible screen reader text.
+If it is vague like, "Read more" or "Learn more", it won't make sense out of context and it must be changed. Or add invisible screen reader text.
 
 
 
@@ -94,7 +96,7 @@ If it is vauge like, "Read more" or "Learn more", it won't make sense out of con
 
 ### I need a human! I'm not sure, but this link might not have a descriptive name to a screen reader.
 
-If the link text and/or the image's alt text clearly indicate the links purpose and where it will take the them, the link is fine.
+If the link text and/or the image's alt text clearly indicate the links purpose and where it will take the user, the link is fine.
 
 __Visual location:__
 

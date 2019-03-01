@@ -1,3 +1,4 @@
+## {{ audit.title }} [WCAG 1.3.2](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#meaningful-sequence)
 
 __I need a human!__ Manual Test: {{ audit.title|escape }}
 

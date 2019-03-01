@@ -1,5 +1,4 @@
-
-{{ audit.title|escape }}
+## {{ audit.title }} 
 
 {%- if audit.description %}
 
@@ -16,4 +15,3 @@ Score:<br>
 _has items but no custom user template exists_
 
 ---
-<br>

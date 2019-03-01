@@ -1,3 +1,5 @@
+## {{ audit.title }} [WCAG 1.4.4](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#resize-text)
+
 {%- if audit.description %}
 
 {{ audit.description|trim }}
