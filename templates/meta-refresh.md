@@ -1,4 +1,4 @@
-## {{ audit.title }} [WCAG 2.2.1](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#timing-adjustable)
+## {{ audit.title }}
 
 {%- if audit.description %}
 
@@ -16,12 +16,11 @@ __HTML location:__
 {{ item.node.snippet }}
 ```
 
-#### Suggested solution:
+#### Explanation:
 
-Remove the `{{ item.node.snippet }}` tag from the header.
-
-{% include 'includes/other-options-w-details.md' %}
+{% include 'includes/explanation.md' %}
 
 ---
+<br>
 
 {% endfor %}

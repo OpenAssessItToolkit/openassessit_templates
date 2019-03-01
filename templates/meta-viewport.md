@@ -1,4 +1,4 @@
-## {{ audit.title }} [WCAG 1.4.4](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#resize-text)
+## {{ audit.title }}
 
 {%- if audit.description %}
 
@@ -16,16 +16,11 @@ __HTML location:__
 {{ item.node.snippet }}
 ```
 
-#### Suggested solution:
+#### Explanation:
 
-If applicable:
-
-1. Change `maximum-scale=1.0` to at least `maximum-scale=5`.
-
-2. Remove the `user-scaleable=no` attribute from the meta tag.
-
-{% include 'includes/other-options-w-details.md' %}
+{% include 'includes/explanation.md' %}
 
 ---
+<br>
 
 {% endfor %}

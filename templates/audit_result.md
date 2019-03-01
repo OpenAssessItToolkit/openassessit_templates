@@ -1,9 +1,7 @@
-## {{ audit.title }}
+## {{ audit.title|escape }}
 
 {% if audit.description %}
-
 {{ audit.description|escape }}
-
 {% endif %}
 
 {{ audit.scoreDisplayMode|capitalize }} score = {{ audit.score }}
@@ -13,6 +11,5 @@ Note: This is the default `audit_result.md` template. Creating a [custom templat
 ```json
 {{ audit }}
 ```
-
 ---
-
+<br>

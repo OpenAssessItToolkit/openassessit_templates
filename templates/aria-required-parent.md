@@ -1,4 +1,4 @@
-## {{ audit.title }} [WCAG 1.3.1](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#info-and-relationships)
+## {{ audit.title }}
 
 {%- if audit.description %}
 
@@ -21,17 +21,11 @@ __HTML location:__
 {{ item.node.snippet }}
 ```
 
-#### Suggested solution:
+#### Explanation:
 
-Using this `role` on this child element is harmful because it does not do anything without it's required parent roles. It will confuse assistive technology and the people who rely on it.
-
-If this element's `role` is meant to be helpful, add the required `role` indicated above to its parent.
-
-If this element's `role` is unnecessary, remove it.
-
-
-{% include 'includes/other-options.md' %}
+{% include 'includes/explanation.md' %}
 
 ---
+<br>
 
 {% endfor %}

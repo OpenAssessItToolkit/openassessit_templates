@@ -1,5 +1,3 @@
-## {{ audit.title }} [WCAG 3.3.2](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#labels-or-instructions)
-
 {%- if audit.description %}
 
 {{ audit.description|trim }}
@@ -20,14 +18,11 @@ __HTML location:__
 {{ item.node.snippet }}
 ```
 
-#### Suggested solution:
-Add `<label for="something">` to associate the label with that form field. If the form element does not have an ID attribute to associate add `id="something"`.
-If you wish to visually hide the label then add a class like `.sr-only` or `.element-invisible` to the `<label>`.
+#### Explanation:
 
-If that already exists, add a `placeholder` attribute. Hidden labels require a `placeholder` attribute so people know what the field is for.
-
-{% include 'includes/other-options-w-details.md' %}
+{% include 'includes/explanation.md' %}
 
 ---
+<br>
 
 {% endfor %}

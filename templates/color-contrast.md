@@ -1,4 +1,4 @@
-## {{ audit.title }} [WCAG 1.4.3](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#contrast-minimum)
+## {{ audit.title }}
 
 {%- if audit.description %}
 
@@ -8,7 +8,7 @@
 
 {% for item in audit.details['items'] %}
 
-### The element _"{{ item.node.snippet|striptags }}"_ has low contrast.
+### The element _{{ item.node.snippet|striptags }}_ has low contrast.
 
 __Visual location:__
 
@@ -21,13 +21,11 @@ __HTML location:__
 {{ item.node.snippet }}
 ```
 
-#### Suggested solution:
-{{ item.node.explanation|escape|replace('Fix any of the following:', '')|replace('Fix all of the following:', '') }}
+#### Explanation:
 
-[Find a color with higher contrast](http://contrast-finder.tanaguru.com).
-
-{% include 'includes/other-options.md' %}
+{% include 'includes/explanation.md' %}
 
 ---
+<br>
 
 {% endfor %}

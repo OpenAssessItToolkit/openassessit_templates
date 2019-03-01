@@ -1,4 +1,4 @@
-## {{ audit.title }} [WCAG 4.1.1](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#parsing)
+## {{ audit.title }}
 
 {%- if audit.description %}
 
@@ -20,14 +20,11 @@ __HTML location:__
 {{ item.node.snippet }}
 ```
 
-####Suggested solution:
+#### Explanation:
 
-1. Check if the page needs that ID for CSS for visual reasons.
-2. Check if the page needs that ID for JS for interactive behaviors.
-3. If it needs the IDs edit the dependent code, then remove duplicate IDs from the HTML.
-
-{% include 'includes/other-options-w-details.md' %}
+{% include 'includes/explanation.md' %}
 
 ---
+<br>
 
 {% endfor %}

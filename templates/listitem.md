@@ -1,4 +1,4 @@
-## {{ audit.title }} [WCAG 1.3.1](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#info-and-relationships)
+## {{ audit.title }}
 
 {%- if audit.description %}
 
@@ -26,5 +26,6 @@ Move the offending child elements inside list item `<li>` elements.
 {% include 'includes/other-options.md' %}
 
 ---
+<br>
 
 {% endfor %}

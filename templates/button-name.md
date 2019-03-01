@@ -1,4 +1,4 @@
-## {{ audit.title }} [WCAG 4.1.2](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#name-role-value)
+## {{ audit.title }}
 
 {%- if audit.description %}
 
@@ -20,14 +20,11 @@ __Visual location:__
 {{ item.node.snippet }}
 ```
 
-#### Suggested solution:
+#### Explanation:
 
-There are many ways to fix this issue:
-
-{{ item.node.explanation|escape|replace('  ', '<br>') }}
-
-{% include 'includes/other-options.md' %}
+{% include 'includes/explanation.md' %}
 
 ---
+<br>
 
 {% endfor %}

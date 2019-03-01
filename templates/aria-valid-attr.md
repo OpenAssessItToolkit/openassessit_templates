@@ -1,4 +1,4 @@
-## {{ audit.title }} [WCAG 4.1.1](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#parsing)
+## {{ audit.title }}
 
 {%- if audit.description %}
 
@@ -28,5 +28,6 @@ TODO.
 {% include 'includes/other-options-w-details.md' %}
 
 ---
+<br>
 
 {% endfor %}

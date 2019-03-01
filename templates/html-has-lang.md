@@ -1,4 +1,4 @@
-## {{ audit.title }} [WCAG 3.1.1](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#language-of-page)
+## {{ audit.title }}
 
 {%- if audit.description %}
 
@@ -16,11 +16,11 @@ __HTML location:__
 {{ item.node.snippet }}
 ```
 
-#### Suggested solution:
-Add a `lang` attribute. For websites in english use `<html lang="en">`. [Other languages references](https://www.w3schools.com/tags/ref_language_codes.asp)
+#### Explanation:
 
-{% include 'includes/other-options-w-details.md' %}
+{% include 'includes/explanation.md' %}
 
 ---
+<br>
 
 {% endfor %}
