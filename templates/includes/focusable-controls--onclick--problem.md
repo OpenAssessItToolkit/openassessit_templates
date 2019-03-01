@@ -1,1 +1,0 @@
-Not accessible because a device dependent onclick event handler is present. That means these links work with a mouse, but not a keyboard. These links also cannot receive keyboard focus because they are just `<div>` elements. `<div>`s cannot receive focus by default.
