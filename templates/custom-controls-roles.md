@@ -1,4 +1,4 @@
-## {{ audit.title }} [WCAG 4.1.2](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#name-role-value)
+## {{ audit.title|escape }}
 
 __I need a human!__ Manual Test: {{ audit.title|escape }}
 
@@ -7,6 +7,7 @@ __I need a human!__ Manual Test: {{ audit.title|escape }}
 Description:<br>
 {{ audit.description|trim|escape }}
 
-{% endif -%}
+{% endif %}
 
 ---
+<br>

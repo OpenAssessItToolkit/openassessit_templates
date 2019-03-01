@@ -1,4 +1,4 @@
-## {{ audit.title }} [WCAG 1.3.1](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#info-and-relationships)
+## {{ audit.title }}
 
 {%- if audit.description %}
 
@@ -20,11 +20,11 @@ __HTML location:__
 {{ item.node.snippet }}
 ```
 
-#### Suggested solution:
-Move the offending child elements inside the `<dt>` or `<dd>` elements.
+#### Explanation:
 
-{% include 'includes/other-options.md' %}
+{% include 'includes/explanation.md' %}
 
 ---
+<br>
 
 {% endfor %}
