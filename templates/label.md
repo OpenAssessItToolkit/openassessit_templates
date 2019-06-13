@@ -8,7 +8,7 @@
 
 {% for item in audit.details['items'] %}
 
-### This element is missing a label
+### This element may be missing a label
 
 __Visual location:__
 
@@ -21,13 +21,23 @@ __HTML location:__
 ```
 
 #### Suggested solution:
-Add `<label for="something">` to associate the label with that form field. If the form element does not have an ID attribute to associate add `id="something"`.
-If you wish to visually hide the label then add a class like `.sr-only` or `.element-invisible` to the `<label>`.
 
-If that already exists, add a `placeholder` attribute. Hidden labels require a `placeholder` attribute so people know what the field is for.
+1. Check for a `<label for="something">` attribute.
+2. If it exists, ensure the `for` element that it is referencing exists as an `id` on its intended form field.
+3. If it is missing, Add `<label for="something">` to associate the label with that form field. If the form element does not have an ID attribute to associate add `id="something"`.
+
+Also see "Other options" below for more valid solutions.
+
+Note 1: In some cases, you could visually hide the label using 'invisible screen reader only text' so it is  still announced to screen reader users.
+
+Note 2: `placeholder` attributes alone are not a valid substitute for `<label>`s, but having one that is descriptive is benificial. If the label uses screen reader only text, a `placeholder` is highly suggested.
 
 {% include 'includes/other-options-w-details.md' %}
 
 ---
 
 {% endfor %}
+
+### FYI: What is 'invisible screen reader only text'?
+
+{% include 'includes/link-name--sr-only--solution.md' %}
