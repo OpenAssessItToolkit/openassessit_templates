@@ -4,7 +4,7 @@ __<{{ data.requestedUrl }}>__
 
 __Screenshot:__
 
-![Screenshot of this website](assets/screenshot.png)
+![Screenshot of this website](assets/{{ generate_img_filename(data.finalUrl, '_screenshot_') }})
 
 <div id="toc">
 <!--TOC-->
