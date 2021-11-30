@@ -22,6 +22,7 @@ __HTML location:__
 ```
 
 #### Suggested solution:
+
 {{ item.node.explanation|escape|replace('Fix any of the following:', '')|replace('Fix all of the following:', '') }}
 
 [Find a color with higher contrast](http://contrast-finder.tanaguru.com).
