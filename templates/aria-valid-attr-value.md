@@ -23,9 +23,9 @@ __HTML location:__
 
 #### Suggested solution:
 
-TODO.
+{{ item.node.explanation|escape|replace('Fix any of the following:', '')|replace('Fix all of the following:', '') }}
 
-{% include 'includes/other-options-w-details.md' %}
+{% include 'includes/other-options.md' %}
 
 ---
 

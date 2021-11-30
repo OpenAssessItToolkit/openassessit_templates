@@ -23,9 +23,11 @@ __HTML location:__
 
 #### Suggested solution:
 
-TODO.
+Invalid `role` values could cause problems with assistive technology.
 
-{% include 'includes/other-options-w-details.md' %}
+Remove the attribute, correct the misspelling, or [change it to a valid role](https://www.w3.org/WAI/PF/HTML/wiki/RoleAttribute#ARIA_1.0_Pre-Defined_Roles).
+
+{% include 'includes/other-options.md' %}
 
 ---
 

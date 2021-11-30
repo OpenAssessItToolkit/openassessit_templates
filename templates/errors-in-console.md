@@ -15,7 +15,8 @@ __Error:__
 ```
 
 #### Suggested solution:
-Auditor TODO: If possible, add solution based on error.
+
+Debug JS code to find source of issue.
 
 ---
 
