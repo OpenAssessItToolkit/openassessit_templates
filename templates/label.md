@@ -12,7 +12,7 @@
 
 __Visual location:__
 
-![Element missing label](assets/{{ generate_img_filename(data.finalUrl, item.node.selector) }})
+![Element missing label](assets/{{ generate_img_filename(data.finalUrl, item.node.selector, item.node.lhId) }})
 
 __HTML location:__
 

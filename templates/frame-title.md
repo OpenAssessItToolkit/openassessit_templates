@@ -12,7 +12,7 @@ __Visual location:__
 
 iframe missing `title`:
 
-![{{ item.node.snippet|striptags }} missing title](assets/{{ generate_img_filename(data.finalUrl, item.node.selector) }})
+![{{ item.node.snippet|striptags }} missing title](assets/{{ generate_img_filename(data.finalUrl, item.node.selector, item.node.lhId) }})
 
 __HTML location:__
 

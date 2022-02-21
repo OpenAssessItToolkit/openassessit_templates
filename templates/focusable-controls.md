@@ -7,7 +7,9 @@ __I need a human!__ Manual Test: {{ audit.title|escape }}
 Description:<br>
 {{ audit.description|trim|escape }}
 
-Pay special attention to menus. The user should be able access the entire menu with the keyboard alone.
+__Explanation (must watch):__
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qYuQLQFy3ss" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 {% endif -%}
 

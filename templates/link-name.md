@@ -16,7 +16,7 @@ Empty links with no text and an image with no alt text may read _"Link Image"_ t
 
 __Visual location:__
 
-![{{ item.node.snippet|striptags }} not descriptive](assets/{{ generate_img_filename(data.finalUrl, item.node.selector) }})
+![{{ item.node.snippet|striptags }} not descriptive](assets/{{ generate_img_filename(data.finalUrl, item.node.selector, item.node.lhId) }})
 
 __HTML location:__
 
@@ -33,7 +33,7 @@ Add an `alt` attribute to image.
 
 __Visual location:__
 
-![{{ item.node.snippet|striptags }} not descriptive](assets/{{ generate_img_filename(data.finalUrl, item.node.selector) }})
+![{{ item.node.snippet|striptags }} not descriptive](assets/{{ generate_img_filename(data.finalUrl, item.node.selector, item.node.lhId) }})
 
 __HTML Location__:
 
@@ -56,7 +56,7 @@ A screen reader user might just hear _"Link {{ item.node.snippet|striptags }} "_
 
 __Visual location:__
 
-![{{ item.node.snippet|striptags }} not descriptive](assets/{{ generate_img_filename(data.finalUrl, item.node.selector) }})
+![{{ item.node.snippet|striptags }} not descriptive](assets/{{ generate_img_filename(data.finalUrl, item.node.selector, item.node.lhId) }})
 
 #### HTML location:
 
@@ -78,7 +78,7 @@ A screen reader user might just hear _"Link {{ item.node.snippet|striptags }} "_
 
 __Visual location:__
 
-![{{ item.node.snippet|striptags }} not descriptive](assets/{{ generate_img_filename(data.finalUrl, item.node.selector) }})
+![{{ item.node.snippet|striptags }} not descriptive](assets/{{ generate_img_filename(data.finalUrl, item.node.selector, item.node.lhId) }})
 
 #### HTML location:
 
@@ -100,7 +100,7 @@ If the link text and/or the image's alt text clearly indicate the links purpose 
 
 __Visual location:__
 
-![{{ item.node.snippet|striptags }} not descriptive](assets/{{ generate_img_filename(data.finalUrl, item.node.selector) }})
+![{{ item.node.snippet|striptags }} not descriptive](assets/{{ generate_img_filename(data.finalUrl, item.node.selector, item.node.lhId) }})
 
 #### HTML location:
 

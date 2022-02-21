@@ -12,7 +12,7 @@ __Visual location:__
 
 Image missing `alt` attribute:
 
-![Image missing alt tag](assets/{{ generate_img_filename(data.finalUrl, item.node.selector) }})
+![Image missing alt tag](assets/{{ generate_img_filename(data.finalUrl, item.node.selector, item.node.lhId) }})
 
 
 __HTML location:__

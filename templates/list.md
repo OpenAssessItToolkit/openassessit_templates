@@ -12,7 +12,7 @@
 
 __Visual location:__
 
-![{{ item.node.snippet|striptags }} list with invalid children](assets/{{ generate_img_filename(data.finalUrl, item.node.selector) }})
+![{{ item.node.snippet|striptags }} list with invalid children](assets/{{ generate_img_filename(data.finalUrl, item.node.selector, item.node.lhId) }})
 
 __HTML location:__
 
@@ -28,4 +28,3 @@ Move the offending child elements inside list item `<li>` elements.
 ---
 
 {% endfor %}
-

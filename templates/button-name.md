@@ -12,7 +12,7 @@
 
 __Visual location:__
 
-![button is not descriptive](assets/{{ generate_img_filename(data.finalUrl, item.node.selector) }})
+![button is not descriptive](assets/{{ generate_img_filename(data.finalUrl, item.node.selector, item.node.lhId) }})
 
 #### HTML location:
 

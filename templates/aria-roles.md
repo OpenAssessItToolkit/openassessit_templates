@@ -12,7 +12,7 @@
 
 __Visual location:__
 
-![aria role is not valid](assets/{{ generate_img_filename(data.finalUrl, item.node.selector) }})
+![aria role is not valid](assets/{{ generate_img_filename(data.finalUrl, item.node.selector, item.node.lhId) }})
 
 
 __HTML location:__

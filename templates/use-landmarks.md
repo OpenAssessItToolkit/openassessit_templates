@@ -7,6 +7,8 @@ __I need a human!__ Manual Test: {{ audit.title|escape }}
 Description:<br>
 {{ audit.description|trim|escape }}
 
+Screen reader users can optionally browse pages by jumping between [Landmarks](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/HTML5.html).  For this to work well, all content needs contained in `<main>`, `<header>`, `<nav>`, `<aside>`, or `<footer>` Landmarks. Otherwise it is possible that a screen reader user could miss its existence.
+
 {% endif -%}
 
 ---

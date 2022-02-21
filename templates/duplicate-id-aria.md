@@ -1,4 +1,4 @@
-## {{ audit.title }} [WCAG 4.1.1](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#parsing) 
+## {{ audit.title }} [WCAG 4.1.1](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#parsing)
 
 {%- if audit.description %}
 
@@ -12,7 +12,7 @@
 
 __Visual location:__
 
-![{{ item.node.snippet|striptags }} element with duplicate ID](assets/{{ generate_img_filename(data.finalUrl, item.node.selector) }})
+![{{ item.node.snippet|striptags }} element with duplicate ID](assets/{{ generate_img_filename(data.finalUrl, item.node.selector, item.node.lhId) }})
 
 __HTML location:__
 
