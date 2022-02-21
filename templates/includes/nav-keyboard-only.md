@@ -36,3 +36,5 @@ Fully implement disclosure widget markup for the button as suggested by the WAI-
 
 https://www.w3.org/TR/wai-aria-practices-1.1/examples/disclosure/disclosure-navigation.html
 
+https://www.w3.org/WAI/GL/wiki/Using_the_WAI-ARIA_aria-expanded_state_to_mark_expandable_and_collapsible_regions#Example_1:_Using_a_button_to_collapse_and_expand_a_region
+

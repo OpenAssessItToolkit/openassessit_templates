@@ -3,5 +3,5 @@
 Path:<br>
 `{{ item.node.path }}`<br>
 Selector:<br>
-`{{ item.node.selector|replace('$', 'S') }}`
+`{{ item.node.lHId|replace('$', 'S') }}`
 </details>

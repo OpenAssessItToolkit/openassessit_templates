@@ -1,10 +1,10 @@
 #### Suggested solution:
 
-Use an anchor `<a href="fancy-cats.html">` instead of the `onclick` handler.
+__Option 1:__
 
-__Alternative solution:__
+Use an element that can recieve focus by default like an anchor `<a href="fancy-cats.html">` instead of the `onclick` handler.
 
-If there is a reason an anchor cannot be used here, the `<div>` would need a `tabindex="0"` attribute to make it focusable and it will need additional keyboard event listeners to detect the enter key when the element is focused.
+__Option 2:__
 
 Example:
 
