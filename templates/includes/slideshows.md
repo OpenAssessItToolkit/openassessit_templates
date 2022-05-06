@@ -1,4 +1,4 @@
-## The Carousel is not keyboard or screen reader accessible [WCAG 1.3.1](https://www.w3.org/WAI/WCAG21/quickref/#info-and-relationships) [WCAG 1.3.1](https://www.w3.org/WAI/WCAG21/quickref/#keyboard) [WCAG](https://www.w3.org/WAI/WCAG21/quickref/#pause-stop-hide) [WCAG 4.1.2](https://www.w3.org/WAI/WCAG21/quickref/#name-role-value)
+## The Carousel is not keyboard or screen reader accessible [WCAG 1.3.1](https://www.w3.org/WAI/WCAG21/quickref/#info-and-relationships) [WCAG 1.3.1](https://www.w3.org/WAI/WCAG21/quickref/#keyboard) [WCAG 2.2.2](https://www.w3.org/WAI/WCAG21/quickref/#pause-stop-hide) [WCAG 4.1.2](https://www.w3.org/WAI/WCAG21/quickref/#name-role-value)
 
 
 ### Slideshows/ Carousels are not screenreader accessible.

@@ -19,3 +19,5 @@ $fauxDivLink.keyup(function (e) {
     }
 });
 ```
+
+https://karlgroves.com/2014/11/24/ridiculously-easy-trick-for-keyboard-accessibility

@@ -25,3 +25,5 @@ Change HTML to become keyboard focusable and add ARIA attributes. Similar to the
 Add JS to toggle expand or collapsed state.
 
 <https://www.w3.org/WAI/GL/wiki/Using_the_WAI-ARIA_aria-expanded_state_to_mark_expandable_and_collapsible_regions#Example_1:_Using_a_button_to_collapse_and_expand_a_region>
+
+<https://w3c.github.io/aria-practices/examples/accordion/accordion.html>
