@@ -29,6 +29,10 @@ Remove the attribute, correct the misspelling, or [change it to a valid role](ht
 
 {% include 'includes/other-options.md' %}
 
+<br>
+
 ---
+
+<br>
 
 {% endfor %}

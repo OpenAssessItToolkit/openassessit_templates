@@ -21,6 +21,10 @@ Add a `lang` attribute. For websites in english use `<html lang="en">`. [Other l
 
 {% include 'includes/other-options-w-details.md' %}
 
+<br>
+
 ---
+
+<br>
 
 {% endfor %}

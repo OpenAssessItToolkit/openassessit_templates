@@ -25,6 +25,10 @@ Move the offending child elements inside the `<dt>` or `<dd>` elements.
 
 {% include 'includes/other-options.md' %}
 
+<br>
+
 ---
+
+<br>
 
 {% endfor %}

@@ -22,6 +22,10 @@ Add an accuate `<title>` in the `<head>` of the document.
 
 {% include 'includes/other-options-w-details.md' %}
 
+<br>
+
 ---
+
+<br>
 
 {% endfor %}

@@ -18,6 +18,10 @@ __Error:__
 
 Debug JS code to find source of issue.
 
+<br>
+
 ---
+
+<br>
 
 {% endfor %}

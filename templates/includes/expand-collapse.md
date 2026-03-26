@@ -17,13 +17,16 @@ Interactive components like this with show/hide functionality need to be accessi
 
 This is by providing keyboard focus and ARIA attributes to describe the state of the object.
 
+The toggle element must be keyboard focusable using the Tab key with a element of `<button>` or `<a href="" role="button">`
+
+It must have a dynamic [aria-expanded](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute that toggles its value. The value should match the visibility of its content. When it is hidden the value should be `false` and when its content gets shown the value should be `true`.
+
 #### Suggested solution:
 
-Change HTML to become keyboard focusable and add ARIA attributes. Similar to the following:
+Add JS to toggle the expanded or collapsed state in a way similar to these examples.
 
+<https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/examples/disclosure-faq/>
 
-Add JS to toggle expand or collapsed state.
+<https://www.w3.org/WAI/ARIA/apg/patterns/accordion/examples/accordion/>
 
-<https://www.w3.org/WAI/GL/wiki/Using_the_WAI-ARIA_aria-expanded_state_to_mark_expandable_and_collapsible_regions#Example_1:_Using_a_button_to_collapse_and_expand_a_region>
-
-<https://w3c.github.io/aria-practices/examples/accordion/accordion.html>
+Note: If the expand/collapse area is directly after the the toggle element, you can omit the `aria-controls` attribute.

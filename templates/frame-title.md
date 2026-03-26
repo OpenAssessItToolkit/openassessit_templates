@@ -26,6 +26,10 @@ Add a descriptive `title` attribute.
 
 {% include 'includes/other-options-w-details.md' %}
 
+<br>
+
 ---
+
+<br>
 
 {% endfor %}

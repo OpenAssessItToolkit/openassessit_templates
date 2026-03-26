@@ -12,7 +12,7 @@ Pay special attention to buttons and links.  For example, links and buttons shou
 
 __Explanation (must watch):__
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JJ6rMXgVDZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JJ6rMXgVDZY?si=1ET_ftwrQsqsej2Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 #### Suggested solution:
 
@@ -21,5 +21,9 @@ Add a hover state.  _They don't need to be the ones suggested below._ They do ne
 
 {% endif -%}
 
+<br>
+
 ---
+
+<br>
 

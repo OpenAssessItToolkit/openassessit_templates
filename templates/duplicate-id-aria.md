@@ -26,6 +26,10 @@ __HTML location:__
 
 {% include 'includes/other-options.md' %}
 
+<br>
+
 ---
+
+<br>
 
 {% endfor %}

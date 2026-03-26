@@ -30,6 +30,10 @@ This `role` does not exist. It will confuse assistive technology and the people 
 
 {% include 'includes/other-options.md' %}
 
+<br>
+
 ---
+
+<br>
 
 {% endfor %}

@@ -32,4 +32,8 @@ Non-compliant example (note that the headings are arbitrary and not in an accura
 <p>Text about the heading</p>
 ```
 
+<br>
+
 ---
+
+<br>

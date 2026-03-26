@@ -32,6 +32,10 @@ If this element's `role` is unnecessary, remove it.
 
 {% include 'includes/other-options.md' %}
 
+<br>
+
 ---
+
+<br>
 
 {% endfor %}

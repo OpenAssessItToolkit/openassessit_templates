@@ -27,6 +27,10 @@ Add an `alt` attribute with an accurate description to the image or add invisibl
 
 {% include 'includes/other-options-w-details.md' %}
 
+<br>
+
 ---
+
+<br>
 
 {% endfor %}

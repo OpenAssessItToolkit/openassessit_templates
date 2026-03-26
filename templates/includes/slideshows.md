@@ -26,4 +26,4 @@ __4. It must contain next and back buttons.__
 
 __5. It must contain indicators on how many slides exist.__ 
 
-
+[More details on accessible carousels](https://www.smashingmagazine.com/2023/02/guide-building-accessible-carousels/)

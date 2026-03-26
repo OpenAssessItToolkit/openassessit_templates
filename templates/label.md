@@ -30,11 +30,15 @@ Also see "Other options" below for more valid solutions.
 
 Note 1: In some cases, you could visually hide the label using 'invisible screen reader only text' so it is  still announced to screen reader users.
 
-Note 2: `placeholder` attributes alone are not a valid substitute for `<label>`s, but having one that is descriptive is benificial. If the label uses screen reader only text, a `placeholder` is highly suggested.
+Note 2: `placeholder` attributes alone are not a valid substitute for `<label>`s, but having one that is descriptive is beneficial. If the label uses screen reader only text, a `placeholder` is highly suggested.
 
 {% include 'includes/other-options-w-details.md' %}
 
+<br>
+
 ---
+
+<br>
 
 {% endfor %}
 
